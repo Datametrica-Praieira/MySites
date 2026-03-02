@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Acessos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            /* Fundo Ultra Ousado: Preto Profundo com Gradiente de Malha Neon */
+            background-color: #050505;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(255, 0, 255, 0.15) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(0, 255, 255, 0.15) 0px, transparent 50%);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            background: rgba(15, 15, 15, 0.8);
+            backdrop-filter: blur(20px);
+            padding: 50px 30px;
+            border-radius: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            width: 90%;
+            max-width: 420px;
+            position: relative;
+        }
+
+        /* Avatar de Celular Animado */
+        .avatar-container {
+            width: 90px;
+            height: 90px;
+            background: linear-gradient(135deg, #ff00ff, #00ffff);
+            border-radius: 25px;
+            margin: 0 auto 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 45px;
+            color: white;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        h1 {
+            color: #fff;
+            font-size: 1.4rem;
+            margin-bottom: 35px;
+            letter-spacing: 1px;
+            font-weight: 300;
+        }
+
+        h1 span {
+            font-weight: 800;
+            display: block;
+            color: #00ffff;
+            text-transform: uppercase;
+        }
+
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .link-card {
+            display: flex;
+            align-items: center;
+            padding: 18px 25px;
+            text-decoration: none;
+            color: #e0e0e0;
+            font-size: 1.1rem;
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 18px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .link-card i {
+            margin-right: 15px;
+            font-size: 1.4rem;
+            width: 30px;
+            text-align: center;
+        }
+
+        /* Hover Individual Ousado */
+        .link-card:hover {
+            transform: translateX(10px);
+            background: rgba(255, 255, 255, 0.1);
+            border-color: #00ffff;
+            color: #fff;
+            box-shadow: -5px 0 15px rgba(0, 255, 255, 0.3);
+        }
+
+        /* Cores de ícones específicas */
+        .fa-boxes-stacked { color: #ff00ff; } /* Estoque */
+        .fa-table-list { color: #00ffff; }    /* PMOC */
+        .fa-broom { color: #ffff00; }         /* Limpeza */
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="avatar-container">
+            <i class="fa-solid fa-mobile-screen-button"></i>
+        </div>
+        
+        <h1>Acessos por aqui:</h1>
+
+        <div class="links-container">
+            <a href="https://apps.powerapps.com/play/e/1c694497-81a9-e314-9366-89dd41d37fec/a/06a04004-610f-46ea-94ba-ed592fcb0d06?tenantId=7283145e-42b1-45ef-b32b-17e9698e5dc9&hint=787df70e-0487-4b1e-a4fe-2bb8deaaa976&sourcetime=1772323449023&source=portal" target="_blank" class="link-card">
+                <i class="fa-solid fa-boxes-stacked"></i>
+                App - Controle Estoque
+            </a>
+
+            <a href="https://script.google.com/macros/s/AKfycbywJhvJJ_mGKB86145T8bYg4dILQDujPTJ3CmqZHc1gOCGB8cB_C3p6vX5jaN_H8E_X/exec" target="_blank" class="link-card">
+                <i class="fa-solid fa-table-list"></i>
+                App - PMOC
+            </a>
+
+            <a href="https://datametrica-praieira.github.io/sistema-qualidade/" target="_blank" class="link-card">
+                <i class="fa-solid fa-broom"></i>
+                App - Registro de Limpeza
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
